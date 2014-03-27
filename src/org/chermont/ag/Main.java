@@ -4,21 +4,26 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		int epocas = 100;
-		int n = 10;
+		int epo    = 100;
+		int pop    = 10;
+		int apt    = 5;		
+		int gen    = 4;
+		double sdv = 2;		
 		
-		Individuo populacao[] = new Individuo[n];
-				
-		for (int i = 0; i < n; i++){
-			populacao[i] = new Individuo();
+		Populacao populacao = new Populacao(pop, gen, sdv);
+		StringBuilder relatorio = new StringBuilder();
+		
+		for (int i = 0; i < epo; i++){
+			populacao.selecionar(apt);
+			populacao.mutacao();
+			populacao.adicionar(pop-apt);			
+			relatorio.append(populacao.relatorio());
 		}
 		
+		Relatorio r = new Relatorio(relatorio.toString(), "relatorio.csv");
+		r.escrever();
 		
-		for (int i = 0; i < epocas; i++){
-			
-			
-			
-		}
+		System.exit(0);
 
 	}
 
