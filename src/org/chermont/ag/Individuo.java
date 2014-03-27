@@ -32,12 +32,12 @@ public class Individuo implements Comparable<Individuo> {
 		for (int i = 0; i < genes; i++){
 			soma = soma + genotipo[i];
 		}
-		return Math.abs( soma/genes - 1 );
+		return soma/genes;
 	}
 
 	@Override
 	public int compareTo(Individuo outro) {		
-		return Double.compare(this.fitness(), outro.fitness());
+		return Double.compare(Math.abs(this.fitness()-1), Math.abs(outro.fitness()-1));
 	}
 	
 

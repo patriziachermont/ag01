@@ -8,7 +8,7 @@ public class Main {
 		int pop    = 10;
 		int apt    = 5;		
 		int gen    = 4;
-		double sdv = 2;		
+		double sdv = 10;		
 		
 		Populacao populacao = new Populacao(pop, gen, sdv);
 		StringBuilder relatorio = new StringBuilder();
@@ -20,7 +20,7 @@ public class Main {
 			relatorio.append(populacao.relatorio());
 		}
 		
-		Relatorio r = new Relatorio(relatorio.toString(), "relatorio.csv");
+		Relatorio r = new Relatorio(relatorio.toString(), "relatorio10.csv");
 		r.escrever();
 		
 		System.exit(0);
