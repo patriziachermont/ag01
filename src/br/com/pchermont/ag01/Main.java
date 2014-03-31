@@ -8,7 +8,7 @@ public class Main {
 		int n = 10;
 		int s = 5;		
 		int g = 4;
-		double d = 10;		
+		double d = 0.25;		
 		
 		Populacao populacao = new Populacao(n, g, d);
 		
