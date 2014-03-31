@@ -45,6 +45,7 @@ public class Populacao {
 	public void selecionar(int s) {
 		
 		int n = individuos.size();
+		
 		Collections.sort(individuos);
 		
 		for (int i = 0; i < n-s; i++){
@@ -62,7 +63,7 @@ public class Populacao {
 
 	/**
 	 * Aplica a mutação em todos os indivíduos da população.
-	 * @param d
+	 * @param d Desvio padrão da distribuição gaussiana.
 	 */
 	public void mutacao(double d) {
 		for (Individuo individuo : individuos){

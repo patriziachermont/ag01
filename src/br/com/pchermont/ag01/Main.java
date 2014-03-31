@@ -28,7 +28,7 @@ public class Main {
 		// Criação da população inicial
 		Populacao populacao = new Populacao(n, g, d);
 		
-		// Seleção, mutação e criação de novos indivíduos em cada época
+		// Loop de seleção, mutação e criação de novos indivíduos em cada época
 		for (int i = 0; i < e; i++){
 			populacao.selecionar(s);
 			populacao.mutacao(d);

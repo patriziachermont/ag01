@@ -34,7 +34,7 @@ public class Individuo implements Comparable<Individuo> {
 	
 	/**
 	 * Aplica a mutação no indivíduo. Por principio, a mutação é aplicada
-	 * em apenas um dos genes e de forma aditiva.
+	 * em apenas um dos genes aloeatoriamente e de forma aditiva.
 	 * @param d Desvio padrão da distribuição gaussiana.
 	 */
 	public void mutacao(double d){
@@ -58,11 +58,14 @@ public class Individuo implements Comparable<Individuo> {
 	@Override
 	/**
 	 * Compara o indivíduo com outro.
-	 * @return um valor negativo, zero ou positivo, caso o outro indivíduo seja
+	 * @return Um valor positivo, zero ou negativo, caso o outro indivíduo seja
 	 * mais apto, tão apto ou menos apto, respectivamente.
 	 */
 	public int compareTo(Individuo outro) {		
-		return Double.compare(Math.abs(this.fitness()-1), Math.abs(outro.fitness()-1));
+		return Double.compare(
+				Math.abs(this.fitness()-1),
+				Math.abs(outro.fitness()-1)
+		);
 	}
 	
 
